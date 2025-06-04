@@ -22,6 +22,7 @@ extern "kernel32" fn GetProcAddress(hModule: windows.HMODULE, lpProcName: [*:0]c
 extern "kernel32" fn LoadLibraryA(lpLibFileName: [*:0]const u8) callconv(WINAPI) ?windows.HMODULE;
 extern "kernel32" fn GetProcessHeap() callconv(WINAPI) windows.HANDLE;
 extern "kernel32" fn HeapAlloc(hHeap: windows.HANDLE, dwFlags: windows.DWORD, dwBytes: usize) callconv(WINAPI) ?*anyopaque;
+extern "kernel32" fn HeapFree(hHeap: windows.HANDLE, dwFlags: windows.DWORD, lpMem: ?*anyopaque) callconv(WINAPI) windows.BOOL;
 extern "kernel32" fn GetLastError() callconv(WINAPI) windows.DWORD;
 
 const HEAP_ZERO_MEMORY: windows.DWORD = 0x00000008;
@@ -95,6 +96,9 @@ pub fn main() !void {
                 std.debug.print("{X:0>2} ", .{data[i]});
             }
             std.debug.print("\n", .{}); // Fixed: empty tuple instead of empty braces
+
+            // Free the allocated buffer after use
+            _ = HeapFree(GetProcessHeap(), 0, data);
         }
     } else {
         std.debug.print("[!] Deobfuscation failed!\n", .{}); // Fixed: empty tuple instead of empty braces

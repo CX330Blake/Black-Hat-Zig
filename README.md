@@ -28,6 +28,10 @@ This project provides many malware techniques implementation using Zig since I'm
 
 Okay, let's hack the planet!
 
+## Disclaimer
+
+This repository is provided for educational and research purposes only. The authors do not endorse or condone malicious use of the code or techniques demonstrated here. Use this project responsibly and always comply with applicable laws.
+
 ## Table of content
 
 1. [Payload Placement](./Payload-Placement/)
@@ -49,10 +53,10 @@ Okay, let's hack the planet!
         - [UUID Obfuscation](./Payload-Obfuscation/UUID-Obfuscation/UUIDFuscation/)
         - [UUID Deobfuscation](./Payload-Obfuscation/UUID-Obfuscation/UUIDDeobfuscation/)
 
-3. [Payload Encryption](./Payload-Encrytion/)
-    - [XOR Encryption](./Payload-Encrytion/XOR/)
-    - [RC4 Encryption](./Payload-Encrytion/RC4/)
-    - [AES Encryption](./Payload-Encrytion/AES/)
+3. [Payload Encryption](./Payload-Encryption/)
+    - [XOR Encryption](./Payload-Encryption/XOR/)
+    - [RC4 Encryption](./Payload-Encryption/RC4/)
+    - [AES Encryption](./Payload-Encryption/AES/)
 
 ## Usage
 
@@ -73,3 +77,5 @@ zig build -Dtarget=x86_64-windows
 ## Contribution
 
 This project is currently maintained by [@CX330Blake](https://github.com/CX330Blake). PRs are welcomed. Hope there's more people use Zig for malware developing so the ecosystem will be more mature.
+
+See [LICENSE](./LICENSE) for license information.
