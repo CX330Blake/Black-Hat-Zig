@@ -5,7 +5,9 @@ const std = @import("std");
 /// more complicated.
 fn xorWithKeyAndIndex(payload: []u8, key: u8) void {
     for (payload, 0..) |*byte, i| {
-        byte.* = byte.* ^ (key + @as(u8, @intCast(i)));
+        // Truncate i to u8 (i mod 256), then do wrapping add with key (overflow in the sum),
+        // finally XOR the result with the payload byte.
+        byte.* = byte.* ^ (key +% @as(u8, @truncate(i)));
     }
 }
 
@@ -14,7 +16,7 @@ fn xorWithKeyAndIndex(payload: []u8, key: u8) void {
 /// key in each iteration.
 fn xorWithMultiBytesKey(payload: []u8, key: []const u8) void {
     const key_len = key.len;
-    if (key_len == 0) return; // Division by zero
+    if (key_len == 0) @panic("Key length must be greater than 0"); // Division by zero
 
     var j: usize = 0;
     for (payload) |*byte| {
