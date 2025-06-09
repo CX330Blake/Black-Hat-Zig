@@ -3,10 +3,6 @@ const windows = std.os.windows;
 const print = std.debug.print;
 
 // Windows API functions
-extern "kernel32" fn LoadLibraryA([*:0]const u8) callconv(.C) ?windows.HMODULE;
-extern "kernel32" fn GetCurrentProcessId() callconv(.C) windows.DWORD;
-extern "kernel32" fn GetLastError() callconv(.C) windows.DWORD;
-extern "kernel32" fn FreeLibrary(hLibModule: windows.HMODULE) callconv(.C) windows.BOOL;
 extern "kernel32" fn GetModuleFileNameA(hModule: ?windows.HMODULE, lpFilename: [*]u8, nSize: windows.DWORD) callconv(.C) windows.DWORD;
 
 pub fn main() !void {
@@ -25,7 +21,7 @@ pub fn main() !void {
     }
 
     const dll_path = args[1];
-    const current_pid = GetCurrentProcessId();
+    const current_pid = windows.GetCurrentProcessId();
 
     print("[i] Injecting \"{s}\" To The Local Process Of Pid: {d} \n", .{ dll_path, current_pid });
 
@@ -40,11 +36,9 @@ pub fn main() !void {
     print("[+] Full DLL path: {s}\n", .{full_path});
     print("[+] Loading Dll... ", .{});
 
-    // Convert to null-terminated string for Windows API
-    const dll_path_z = try allocator.dupeZ(u8, full_path);
-    defer allocator.free(dll_path_z);
-
-    if (LoadLibraryA(dll_path_z.ptr)) |handle| {
+    var open_lib = std.DynLib.open(dll_path);
+    if (open_lib) |*lib| {
+        const handle = lib.inner.dll;
         print("SUCCESS!\n", .{});
         print("[+] DLL Handle: 0x{x}\n", .{@intFromPtr(handle)});
 
@@ -65,24 +59,21 @@ pub fn main() !void {
         _ = std.io.getStdIn().reader().readByte() catch {};
 
         // Unload the DLL
-        if (FreeLibrary(handle) != 0) {
-            print("[+] DLL unloaded successfully\n", .{});
-        } else {
-            print("[!] Failed to unload DLL\n", .{});
-        }
+        lib.close();
+        print("[+] DLL unloaded successfully\n", .{});
 
         print("[+] DONE!\n", .{});
-    } else {
-        const error_code = GetLastError();
+    } else |_| {
+        const error_code = windows.GetLastError();
         print("FAILED!\n", .{});
-        print("[!] LoadLibraryA Failed With Error: {d}\n", .{error_code});
+        print("[!] LoadLibraryA Failed With Error: {d}\n", .{@intFromEnum(error_code)});
 
         // Print common error meanings
         switch (error_code) {
-            2 => print("    → The system cannot find the file specified\n", .{}),
-            3 => print("    → The system cannot find the path specified\n", .{}),
-            126 => print("    → The specified module could not be found\n", .{}),
-            193 => print("    → Not a valid Win32 application\n", .{}),
+            .FILE_NOT_FOUND => print("    → The system cannot find the file specified\n", .{}),
+            .PATH_NOT_FOUND => print("    → The system cannot find the path specified\n", .{}),
+            .MOD_NOT_FOUND => print("    → The specified module could not be found\n", .{}),
+            .BAD_EXE_FORMAT => print("    → Not a valid Win32 application\n", .{}),
             else => print("    → Unknown error\n", .{}),
         }
         std.process.exit(1);
