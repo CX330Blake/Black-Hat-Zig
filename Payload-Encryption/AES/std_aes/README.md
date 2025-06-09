@@ -2,5 +2,3 @@
 
 Thanks for the Zig team, there's an AES implementation in `std.crypto`.
 This example uses the built‑in library to encrypt a payload.
-
-Compile with `zig build` on Windows.
