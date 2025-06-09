@@ -67,10 +67,10 @@ zig build
 ## Payload Obfuscation
 
 - [IP Address Obfuscation](./Payload-Obfuscation/IP-Address-Obfuscation/)
-  - [IPv4 Obfuscation](./Payload-Obfuscation/IP-Address-Obfuscation/IPv4Fuscation/)
-  - [IPv4 Deobfuscation](./Payload-Obfuscation/IP-Address-Obfuscation/IPv4Fuscation/)
-  - [IPv6 Obfuscation](./Payload-Obfuscation/IP-Address-Obfuscation/IPv6Fuscation/)
-  - [IPv6 Deobfuscation](./Payload-Obfuscation/IP-Address-Obfuscation/IPv6Deobfuscation/)
+  - [IPv4 Obfuscation](./Payload-Obfuscation/IP-Address-Obfuscation/ipv4_obfuscation/)
+  - [IPv4 Deobfuscation](./Payload-Obfuscation/IP-Address-Obfuscation/ipv4_deobfuscation/)
+  - [IPv6 Obfuscation](./Payload-Obfuscation/IP-Address-Obfuscation/ipv6_obfuscation/)
+  - [IPv6 Deobfuscation](./Payload-Obfuscation/IP-Address-Obfuscation/ipv6_deobfuscation/)
 - [MAC Address Obfuscation](./Payload-Obfuscation/MAC-Address-Obfuscation/)
   - [MAC Address Obfuscation](./Payload-Obfuscation/MAC-Address-Obfuscation/MACFuscation/)
   - [MAC Address Deobfuscation](./Payload-Obfuscation/MAC-Address-Obfuscation/MACDeobfuscation/)
@@ -91,12 +91,12 @@ zig build
 
 ## Payload Execution
 
-- [DLL](./Payload-Execution/DLL/)
-- [Shellcode](./Payload-Execution/Shellcode/)
+- [DLL](./Payload-Execution/dll/)
+- [Shellcode](./Payload-Execution/shellcode/)
 
 ## Reverse Shell
 
-- [Reverse Shell With Standard Library](./Reverse-Shell/stdRevShell/)
+- [Reverse Shell With Standard Library](./Reverse-Shell/std_reverse_shell/)
 
 ## Malware Techniques
 
