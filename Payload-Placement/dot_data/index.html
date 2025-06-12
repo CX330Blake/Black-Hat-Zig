@@ -1330,16 +1330,26 @@
 <h2 id="sections">Sections</h2>
 <p>For those who visited this project, I'll assume you already know what is "section" and know the basics of the following common sections.</p>
 <ul>
-<li>.bss section</li>
+<li>.bss section<ul>
 <li>Uninitialized global variables</li>
-<li>.data section</li>
+</ul>
+</li>
+<li>.data section<ul>
 <li>Initialized global variables</li>
-<li>.rdata section</li>
+</ul>
+</li>
+<li>.rdata section<ul>
 <li>Read-only data (strings, vtable, etc)</li>
-<li>.text section</li>
+</ul>
+</li>
+<li>.text section<ul>
 <li>Code segment, stores machine codes</li>
-<li>.rsrc section</li>
+</ul>
+</li>
+<li>.rsrc section<ul>
 <li>Resource section, only exists on Windows. It often stores graph, icon, etc</li>
+</ul>
+</li>
 </ul>
 <p>For more details: <a href="https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#special-sections">Special Sections - MSDN</a>.</p>
 <h2 id="code-explanation">Code Explanation</h2>
