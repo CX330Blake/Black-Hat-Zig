@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#xor-encryption" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -592,6 +597,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    XOR Encryption
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -604,6 +624,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      TL;DR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Walkthrough
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -713,7 +770,7 @@
   
   
   <span class="md-ellipsis">
-    DLL
+    Execute Via DLL
     
   </span>
   
@@ -736,7 +793,7 @@
   
   
   <span class="md-ellipsis">
-    Shellcode
+    Execute Via Shellcode
     
   </span>
   
@@ -1205,6 +1262,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      TL;DR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Walkthrough
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1223,9 +1308,64 @@
   
 
 
-  <h1>XOR Encryption</h1>
-
-
+<h1 id="xor-encryption">XOR Encryption</h1>
+<h2 id="tldr">TL;DR</h2>
+<p><a href="https://github.com/CX330Blake/Black-Hat-Zig/tree/main/Payload-Encryption">See the code example</a></p>
+<h2 id="code-walkthrough">Code Walkthrough</h2>
+<div class="language-zig highlight"><span class="filename">main.zig</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">const</span><span class="w"> </span><span class="n">std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">@import</span><span class="p">(</span><span class="s">&quot;std&quot;</span><span class="p">);</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">/// This is the first approach to encrypt the payload.</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">/// We add the index &quot;i&quot; to each iteration to make the encryption</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">/// more complicated.</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">fn</span><span class="w"> </span><span class="n">xorWithKeyAndIndex</span><span class="p">(</span><span class="n">payload</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="o">:</span><span class="w"> </span><span class="kt">u8</span><span class="p">)</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">payload</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">..)</span><span class="w"> </span><span class="o">|*</span><span class="n">byte</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="c1">// Truncate i to u8 (i mod 256), then do wrapping add with key (overflow in the sum),</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="c1">// finally XOR the result with the payload byte.</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="n">byte</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">byte</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">+%</span><span class="w"> </span><span class="nb">@as</span><span class="p">(</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="nb">@truncate</span><span class="p">(</span><span class="n">i</span><span class="p">)));</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">/// This is the second approach to encrypt the payload.</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1">/// We use a multi-bytes key and iterate each byte as different</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1">/// key in each iteration.</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="k">fn</span><span class="w"> </span><span class="n">xorWithMultiBytesKey</span><span class="p">(</span><span class="n">payload</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="kr">const</span><span class="w"> </span><span class="kt">u8</span><span class="p">)</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">key_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="n">len</span><span class="p">;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">key_len</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="nb">@panic</span><span class="p">(</span><span class="s">&quot;Key length must be greater than 0&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Division by zero</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">j</span><span class="o">:</span><span class="w"> </span><span class="kt">usize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="o">|*</span><span class="n">byte</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="n">byte</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">byte</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="n">j</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">key_len</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">            </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="p">}</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="kr">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="o">!</span><span class="kt">void</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">stdout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">getStdOut</span><span class="p">().</span><span class="n">writer</span><span class="p">();</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">payload1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">_</span><span class="p">]</span><span class="kt">u8</span><span class="p">{</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0x20</span><span class="p">,</span><span class="w"> </span><span class="mh">0x30</span><span class="p">,</span><span class="w"> </span><span class="mh">0x40</span><span class="p">,</span><span class="w"> </span><span class="mh">0x50</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">key1</span><span class="o">:</span><span class="w"> </span><span class="kt">u8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xAA</span><span class="p">;</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[+] Original payload1: {any}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">payload1</span><span class="p">});</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="c1">// Encrypt</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="n">xorWithKeyAndIndex</span><span class="p">(</span><span class="n">payload1</span><span class="p">[</span><span class="mi">0</span><span class="p">..],</span><span class="w"> </span><span class="n">key1</span><span class="p">);</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[+] After xorByIKeys with key {X}: {any}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="w"> </span><span class="n">key1</span><span class="p">,</span><span class="w"> </span><span class="n">payload1</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="c1">// Decrypt</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">    </span><span class="n">xorWithKeyAndIndex</span><span class="p">(</span><span class="n">payload1</span><span class="p">[</span><span class="mi">0</span><span class="p">..],</span><span class="w"> </span><span class="n">key1</span><span class="p">);</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[+] Restored payload1: {any}</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">payload1</span><span class="p">});</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">payload2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">_</span><span class="p">]</span><span class="kt">u8</span><span class="p">{</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x04</span><span class="p">,</span><span class="w"> </span><span class="mh">0x05</span><span class="p">,</span><span class="w"> </span><span class="mh">0x06</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">key2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">_</span><span class="p">]</span><span class="kt">u8</span><span class="p">{</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0x20</span><span class="p">,</span><span class="w"> </span><span class="mh">0x30</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[+] Original payload2: {any}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">payload2</span><span class="p">});</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">    </span><span class="c1">// Encrypt</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">    </span><span class="n">xorWithMultiBytesKey</span><span class="p">(</span><span class="n">payload2</span><span class="p">[</span><span class="mi">0</span><span class="p">..],</span><span class="w"> </span><span class="n">key2</span><span class="p">[</span><span class="mi">0</span><span class="p">..]);</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[+] After xorByInputKey with key {any}: {any}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="w"> </span><span class="n">key2</span><span class="p">,</span><span class="w"> </span><span class="n">payload2</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">    </span><span class="c1">// Decrypt</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">    </span><span class="n">xorWithMultiBytesKey</span><span class="p">(</span><span class="n">payload2</span><span class="p">[</span><span class="mi">0</span><span class="p">..],</span><span class="w"> </span><span class="n">key2</span><span class="p">[</span><span class="mi">0</span><span class="p">..]);</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[+] Restored payload2: {any}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">payload2</span><span class="p">});</span>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="p">}</span>
+</span></code></pre></div>
 
 
 
