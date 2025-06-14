@@ -1,0 +1,3 @@
+#define IDR_RCDATA1 101
+
+IDR_RCDATA1 RCDATA "calc.ico"
