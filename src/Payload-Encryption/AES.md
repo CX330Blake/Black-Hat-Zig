@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/Payload-Encryption/AES)
+[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Encryption/AES)
 
 ## Using bcrypt.h
 

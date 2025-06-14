@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/Payload-Placement/dot_text_section)
+[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Placement/dot_text_section)
 
 ## Code Walkthrough
 

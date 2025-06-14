@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/Payload-Obfuscation/IP-Address-Obfuscation)
+[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Obfuscation/IP-Address-Obfuscation)
 
 ## Intro
 

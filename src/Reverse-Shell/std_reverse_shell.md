@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/Reverse-Shell/std_reverse_shell)
+[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Reverse-Shell/std_reverse_shell)
 
 ## Code Walkthrough
 
