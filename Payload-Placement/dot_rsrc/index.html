@@ -679,6 +679,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    .rsrc Section
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -690,6 +703,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1678,6 +1719,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1696,7 +1754,14 @@
 
 
 <h1 id="rsrc-section">.rsrc Section</h1>
-<p>Currently unavailable. See <a href="https://github.com/CX330Blake/Black-Hat-Zig/issues/5">https://github.com/CX330Blake/Black-Hat-Zig/issues/5</a></p>
+<h2 id="explanation">Explanation</h2>
+<p>The <code>.rsrc</code> section of a PE file contains resources such as icons, images, and
+version information. Malware sometimes hides shellcode within these resources
+and extracts it at runtime, as the section is usually ignored by cursory code
+scans. Although the example for this technique is not yet implemented in the
+repository, the idea is to embed the payload as a resource and read it from the
+<code>.rsrc</code> section when needed. See
+<a href="https://github.com/CX330Blake/Black-Hat-Zig/issues/5">https://github.com/CX330Blake/Black-Hat-Zig/issues/5</a> for future updates.</p>
 
 
 

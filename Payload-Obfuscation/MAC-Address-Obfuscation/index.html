@@ -847,6 +847,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#obfuscation" class="md-nav__link">
     <span class="md-ellipsis">
       Obfuscation
@@ -1753,6 +1762,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#obfuscation" class="md-nav__link">
     <span class="md-ellipsis">
       Obfuscation
@@ -1792,6 +1810,13 @@
 <h1 id="mac-address-obfuscation">MAC Address Obfuscation</h1>
 <h2 id="tldr">TL;DR</h2>
 <p><a href="https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Obfuscation/MAC-Address-Obfuscation">See the code example</a></p>
+<h2 id="explanation">Explanation</h2>
+<p>MAC address obfuscation converts shellcode into strings formatted like hardware
+MAC addresses (e.g., <code>AA-BB-CC-DD-EE-FF</code>). Because such strings are common in
+network configuration data, they may not raise suspicion when stored or
+transmitted. The program later splits these strings, converts the hexadecimal
+pairs back into bytes, and concatenates them into the original payload. While
+simple, this technique effectively hides binary code from direct inspection.</p>
 <h2 id="obfuscation">Obfuscation</h2>
 <div class="language-zig highlight"><span class="filename">main.zig</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">const</span><span class="w"> </span><span class="n">std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">@import</span><span class="p">(</span><span class="s">&quot;std&quot;</span><span class="p">);</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>

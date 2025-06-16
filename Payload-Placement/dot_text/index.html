@@ -752,6 +752,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#code-walkthrough" class="md-nav__link">
     <span class="md-ellipsis">
       Code Walkthrough
@@ -1744,6 +1753,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#code-walkthrough" class="md-nav__link">
     <span class="md-ellipsis">
       Code Walkthrough
@@ -1774,6 +1792,14 @@
 <h1 id="text-section">.text Section</h1>
 <h2 id="tldr">TL;DR</h2>
 <p><a href="https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Placement/dot_text_section">See the code example</a></p>
+<h2 id="explanation">Explanation</h2>
+<p>Placing a payload in the <code>.text</code> section hides it among the program's executable
+instructions. Because this section is typically marked read-only and executable,
+data stored here can blend in with normal code and be executed directly. The
+example leverages Zig's <code>linksection</code> attribute to embed shellcode bytes inside
+<code>.text</code>, allowing them to run without any additional allocation. This is a
+common anti-analysis trick because the payload resides where disassemblers
+expect legitimate instructions.</p>
 <h2 id="code-walkthrough">Code Walkthrough</h2>
 <p>In this chapter, I will show you how to store out payload into .text section.</p>
 <div class="language-zig highlight"><span class="filename">main.zig</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">const</span><span class="w"> </span><span class="n">std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">@import</span><span class="p">(</span><span class="s">&quot;std&quot;</span><span class="p">);</span>
