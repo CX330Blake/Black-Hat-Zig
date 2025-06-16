@@ -35,6 +35,15 @@ This project provides many malware techniques implementation using Zig since I'm
 
 Okay, let's hack the planet!
 
+## Explanation
+
+This repository is organized as an e‑book showcasing various malware
+development techniques implemented in Zig. Each chapter focuses on a specific
+method—such as process injection or payload encryption—and provides working code
+alongside a detailed walkthrough. Reading through the markdown files will give
+you insight into how these tactics operate and how Zig can be leveraged for
+low‑level tasks.
+
 ## Why Zig?
 
 - 🤝 Easy to interact with C/C++ source

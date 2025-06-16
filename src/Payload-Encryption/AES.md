@@ -4,6 +4,15 @@
 
 [See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Encryption/AES)
 
+## Explanation
+
+Advanced Encryption Standard (AES) is a widely used symmetric cipher. Malware
+often encrypts embedded payloads with AES so that static scanners cannot easily
+identify the malicious code. This chapter demonstrates multiple ways to perform
+AES encryption in Zig, including using Windows' `bcrypt` API and simple
+implementations. The encrypted payload is decrypted in memory right before
+execution, keeping the malicious bytes hidden on disk and complicating analysis.
+
 ## Using bcrypt.h
 
 [bcrypt.h header - MSDN](https://learn.microsoft.com/en-us/windows/win32/api/bcrypt/)

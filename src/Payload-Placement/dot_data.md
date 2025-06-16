@@ -4,6 +4,15 @@
 
 [See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Placement/dot_data_section)
 
+## Explanation
+
+The `.data` section contains global variables that are readable and writable.
+Placing shellcode here is the simplest approach—declare a mutable array with the
+payload bytes. At runtime the code can reference this array directly, but it is
+also easily spotted during static analysis. Security tools often check the `.data`
+section for suspicious byte sequences. This chapter illustrates the basic method
+of embedding shellcode in `.data` and highlights why it may be detected quickly.
+
 ## What Is Payload?
 
 To execute the malicious code, we must load the malicious stuff into the binary somehow. And this malicious stuff, is the so called "payload" or "shellcode".

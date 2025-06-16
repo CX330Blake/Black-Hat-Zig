@@ -4,6 +4,16 @@
 
 [See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Encryption/XOR)
 
+## Explanation
+
+Exclusive OR (XOR) encryption is one of the simplest ways to obfuscate data.
+Each byte of the payload is XORed with a key value. Applying the same operation
+again restores the original bytes. While trivial to reverse if the key is known,
+XOR still hides clear text strings and shellcode from basic scans. The chapter
+shows two XOR routines—one that incorporates the byte index and another that
+uses a multi-byte key—to demonstrate how attackers might protect their payloads
+without resorting to heavy cryptography.
+
 ## Using Standard Library
 
 ```zig title="main.zig"

@@ -4,6 +4,15 @@
 
 [See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Obfuscation/UUID-Obfuscation)
 
+## Explanation
+
+UUID obfuscation stores shellcode chunks as Universally Unique Identifier
+strings. Since UUIDs are routinely seen in configuration files and logs, a list
+of them does not appear suspicious. The program converts groups of 16 bytes into
+UUID format and later decodes them back to raw bytes in memory. This method adds
+an extra step for analysts trying to recover the original payload and can evade
+simple pattern-based searches.
+
 ## Obfuscation
 
 ```zig title="main.zig"
