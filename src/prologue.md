@@ -1,12 +1,5 @@
 # Before We Start
 
-## Explanation
-
-The prologue outlines the tools and environment required to compile and run the
-examples in this repository. It introduces cross‑compilation with Zig and lists
-helpful utilities such as ZYPE and ZYRA. Reading this section ensures you have
-the proper setup before diving into the individual techniques.
-
 ## Prerequisites
 
 - Windows environment

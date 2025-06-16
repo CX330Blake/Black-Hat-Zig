@@ -3,13 +3,6 @@ title: Intro to Black-Hat-Zig
 description: Hello hackers. Hello maldevs. Hello reversers. Nice to see you here to explore the dark power of Zig!
 ---
 
-## Explanation
-
-This index page introduces the Black‑Hat‑Zig project and links to all chapters
-of the e‑book. It acts as the landing page when browsing the documentation,
-highlighting the motivation behind the repository and providing quick access to
-each technique covered throughout the book.
-
 <p align="center">
   <img alt="GitHub License" src="https://img.shields.io/github/license/CX330Blake/black-hat-zig">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/cx330blake/black-hat-zig">

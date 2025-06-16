@@ -35,15 +35,6 @@ This project provides many malware techniques implementation using Zig since I'm
 
 Okay, let's hack the planet!
 
-## Explanation
-
-This repository is organized as an e‑book showcasing various malware
-development techniques implemented in Zig. Each chapter focuses on a specific
-method—such as process injection or payload encryption—and provides working code
-alongside a detailed walkthrough. Reading through the markdown files will give
-you insight into how these tactics operate and how Zig can be leveraged for
-low‑level tasks.
-
 ## Why Zig?
 
 - 🤝 Easy to interact with C/C++ source
@@ -80,7 +71,6 @@ Huge thanks for these contributors!
 
 This project is for ethical and educational purpose only. Don't be a cyber criminal.
 
-
 <!-- GitAds-Verify: SYUFFUKR39H8T8MYYOIUKQ5AFB1O8AQ9 -->
 
 ## GitAds Sponsored
@@ -91,4 +81,3 @@ This project is for ethical and educational purpose only. Don't be a cyber crimi
 </p>
 
 [![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=cx330blake/black-hat-zig@github)](https://gitads.dev/v1/ad-track?source=cx330blake/black-hat-zig@github)
-
