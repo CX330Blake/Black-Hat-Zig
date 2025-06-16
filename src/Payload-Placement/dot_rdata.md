@@ -4,6 +4,15 @@
 
 [See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Placement/dot_rdata_section)
 
+## Explanation
+
+The `.rdata` section holds read‑only data such as constants and string literals.
+By marking the payload as `const` and using `linksection`, we can store shellcode
+in this section. The bytes cannot be modified at runtime, but they still reside
+in an executable area if permissions are set accordingly. Because `.rdata` is
+commonly full of static data, placing code here may evade cursory inspection
+while still allowing direct execution from that memory range.
+
 ## Code Walkthrough
 
 In this chapter, I will show you how to store out payload into .rdata section.

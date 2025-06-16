@@ -4,6 +4,16 @@
 
 [See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Encryption/RC4)
 
+## Explanation
+
+RC4 is a simple stream cipher that remains popular in malicious code because of
+its small footprint and ease of implementation. In Windows, the undocumented
+functions `SystemFunction032` and `SystemFunction033` can perform RC4
+encryption. The sample code demonstrates encrypting a payload with one call and
+decrypting it with another since RC4 is symmetric. Keeping shellcode encrypted
+until execution helps avoid detection by static scanners that search for known
+byte patterns.
+
 ## Using SystemFunction032
 
 ```zig title="main.zig"

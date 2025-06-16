@@ -4,6 +4,15 @@
 
 [See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Obfuscation/MAC-Address-Obfuscation)
 
+## Explanation
+
+MAC address obfuscation converts shellcode into strings formatted like hardware
+MAC addresses (e.g., `AA-BB-CC-DD-EE-FF`). Because such strings are common in
+network configuration data, they may not raise suspicion when stored or
+transmitted. The program later splits these strings, converts the hexadecimal
+pairs back into bytes, and concatenates them into the original payload. While
+simple, this technique effectively hides binary code from direct inspection.
+
 ## Obfuscation
 
 ```zig title="main.zig"

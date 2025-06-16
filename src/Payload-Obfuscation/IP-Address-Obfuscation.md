@@ -4,6 +4,16 @@
 
 [See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Obfuscation/IP-Address-Obfuscation)
 
+## Explanation
+
+IP address obfuscation disguises shellcode bytes as seemingly harmless IP
+strings. Each byte is translated into a portion of an IPv4 or IPv6 address,
+making the payload appear like configuration data or network traffic. When the
+program runs, it parses these strings back into binary form to reconstruct the
+original shellcode for execution. While trivial to decode once discovered, this
+method can bypass naive scans that look for typical shellcode byte patterns in
+files or memory dumps.
+
 ## Intro
 
 Actually, to evade AV/EDR, you can do more than just hiding your payload in different section. You need to obfuscate the code so that the reverse engineers and malware analyst can't get the clear logic, control flow, or meaningful strings without heavily static or dynamic analysis.

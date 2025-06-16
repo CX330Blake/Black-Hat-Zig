@@ -4,6 +4,15 @@
 
 [See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Execution/dll)
 
+## Explanation
+
+Instead of embedding shellcode directly, malware can bundle its functionality in
+a DLL and rely on a small loader to execute it. The loader locates the DLL at
+runtime and calls an exported function or uses `LoadLibrary` to bring it into the
+process. This approach makes the initial executable less suspicious and allows
+the payload to be swapped easily. The included example outlines how to compile
+the DLL and how the loader invokes it using standard Windows API calls.
+
 ## Code Walkthrough
 
 DLL loader
