@@ -1623,7 +1623,7 @@
   
   
   <span class="md-ellipsis">
-    Reverse Shell Using Standard Library
+    Classic Reverse Shell
     
   </span>
   
@@ -1856,6 +1856,8 @@
 <h1 id="reverse-shell-with-tls">Reverse Shell With TLS</h1>
 <h2 id="tldr">TL;DR</h2>
 <p><a href="https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Reverse-Shell/std_reverse_shell_with_tls">See the code example</a></p>
+<p>This example implements a classic reverse shell <strong>using only Zig's standard library</strong>.<br />
+Unlike the <a href="./std_reverse_shell">previous one</a>, this version <strong>implements TLS encryption</strong>, so all network traffic is encrypted. In real-world operations, antivirus and EDR solutions often monitor network traffic. If they detect something resembling command-and-control behavior, it may trigger an alert — which is exactly what we want to avoid. With this reverse shell, encrypted traffic helps <strong>bypass basic detections</strong> by obscuring the communication.</p>
 <h2 id="usage">Usage</h2>
 <p>As an attacker, on the attacking machine, you should generate the certification and the key before starting a listener.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Generate cert and key first</span>
@@ -2063,7 +2065,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../std_reverse_shell/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Reverse Shell Using Standard Library">
+          <a href="../std_reverse_shell/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Classic Reverse Shell">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2073,7 +2075,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Reverse Shell Using Standard Library
+                Classic Reverse Shell
               </div>
             </div>
           </a>
