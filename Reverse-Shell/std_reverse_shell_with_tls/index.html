@@ -1905,10 +1905,6 @@ Unlike the <a href="../std_reverse_shell">previous one</a>, this version <strong
     participant N as 🌐 Network
     participant T as 💻 Target Machine
 
-    Note over A,T: 🤝 TLS Connection Setup
-    A-&gt;&gt;T: Encrypted handshake
-    T-&gt;&gt;A: Connection established
-
     Note over A: Send encrypted command
     A-&gt;&gt;N: 🔒 Encrypted command
     N-&gt;&gt;T: 🔒 Encrypted traffic
