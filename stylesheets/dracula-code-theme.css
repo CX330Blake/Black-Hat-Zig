@@ -1,0 +1,42 @@
+/* Dracula color palette */
+:root {
+    --dracula-bg: hsl(231, 15%, 18%);
+    --dracula-fg: hsl(60, 30%, 96%);
+    --dracula-selection: hsl(231, 25%, 25%);
+    --dracula-blue: hsl(225, 27%, 51%);
+    --dracula-cyan: hsl(191, 97%, 77%);
+    --dracula-green: hsl(135, 94%, 65%);
+    --dracula-orange: hsl(31, 100%, 71%);
+    --dracula-pink: hsl(326, 100%, 74%);
+    --dracula-purple: hsl(265, 89%, 78%);
+    --dracula-red: hsl(0, 100%, 67%);
+    --dracula-yellow: hsl(65, 92%, 76%);
+}
+
+/* Apply Dracula theme to code blocks */
+[data-md-color-scheme="slate"] {
+    /* Code block background and text */
+    --md-code-fg-color: var(--dracula-fg);
+    --md-code-bg-color: var(--dracula-bg);
+
+    /* Syntax highlighting colors */
+    --md-code-hl-operator-color: var(--dracula-pink);
+    --md-code-hl-punctuation-color: var(--dracula-fg);
+    --md-code-hl-string-color: var(--dracula-yellow);
+    --md-code-hl-special-color: var(--dracula-purple);
+    --md-code-hl-number-color: var(--dracula-purple);
+    --md-code-hl-keyword-color: var(--dracula-pink);
+    --md-code-hl-name-color: var(--dracula-fg);
+    --md-code-hl-constant-color: var(--dracula-purple);
+    --md-code-hl-function-color: var(--dracula-green);
+    --md-code-hl-comment-color: var(--dracula-blue);
+    --md-code-hl-variable-color: var(--dracula-orange);
+    --md-code-hl-generic-color: var(--dracula-blue);
+
+    /* Additional syntax elements */
+    --md-code-hl-entity-color: var(--dracula-green);
+    --md-code-hl-tag-color: var(--dracula-pink);
+    --md-code-hl-namespace-color: var(--dracula-fg);
+    --md-code-hl-builtin-color: var(--dracula-cyan);
+    --md-code-hl-class-color: var(--dracula-cyan);
+}
