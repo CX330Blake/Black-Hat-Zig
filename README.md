@@ -55,7 +55,7 @@ This project is mainly maintained & managed by [@CX330Blake](https://github.com/
 Huge thanks for these contributors!
 
 <a href="https://github.com/CX330Blake/black-hat-zig/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=CX330Blake/black-hat-zig" />
+  <img src="https://contrib.rocks/image?repo=cx330blake/black-hat-zig" />
 </a>
 
 ## Credits & References
