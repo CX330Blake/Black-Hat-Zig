@@ -11,13 +11,13 @@ process. This approach makes the initial executable less suspicious and allows
 the payload to be swapped easily. The included example outlines how to compile
 the DLL and how the loader invokes it using standard Windows API calls.
 
-## What is a DLL?
+## What Is A DLL?
 
 A DLL (Dynamic Link Library) is a file format used primarily in Windows operating systems to store code and data that multiple programs can use simultaneously. It contains functions, resources, or data that can be loaded dynamically at runtime and allows programs to share reusable code without embedding it in each executable.
 
 ## Code Walkthrough
 
-### The DLL itself
+### The DLL Itself
 
 ```zig title="root.zig"
 const std = @import("std");
@@ -79,7 +79,7 @@ pub export fn DllMain(hModule: HINSTANCE, dwReason: DWORD, lpReserved: LPVOID) c
 
 `DllMain` is the entry point for a Windows DLL, it is called when the DLL is loaded or unloaded, or when threads are created/terminated. When `dwReason` is `DLL_PROCESS_ATTACH`, `msgBoxPayload` is called, invoking `MessageBoxA` to display a pop up.
 
-### DLL loader
+### DLL Loader
 
 What we are doing here:
 
