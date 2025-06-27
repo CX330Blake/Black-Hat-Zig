@@ -1,3 +1,34 @@
+
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="right">
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=en">English</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=zh-CN">简体中文</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=zh-TW">繁體中文</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=ja">日本語</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=ko">한국어</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=hi">हिन्दी</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=th">ไทย</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=fr">Français</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=de">Deutsch</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=es">Español</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=it">Itapano</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=ru">Русский</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=pt">Português</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=nl">Nederlands</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=pl">Polski</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=ar">العربية</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=fa">فارسی</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=tr">Türkçe</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=vi">Tiếng Việt</a></p>
+        <p><a href="https://openaitx.github.io/view.html?user=CX330Blake&project=Black-Hat-Zig&lang=id">Bahasa Indonesia</a></p>
+      </div>
+    </div>
+  </details>
+</div>
+
 # Black-Hat-Zig
 
 <p align="center">
