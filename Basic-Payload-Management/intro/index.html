@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Encryption/XOR/">
+        <link rel="canonical" href="https://black-hat-zig.cx330.tw/Basic-Payload-Management/intro/">
       
       
-        <link rel="prev" href="../../Payload-Obfuscation/UUID-Obfuscation/">
+        <link rel="prev" href="../../prologue/">
       
       
-        <link rel="next" href="../RC4/">
+        <link rel="next" href="../Payload-Placement/dot_data/">
       
       
-      <link rel="icon" href="../../../assets/favicon.svg">
+      <link rel="icon" href="../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>XOR Encryption - Black-Hat-Zig</title>
+        <title>Intro - Black-Hat-Zig</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/dracula-code-theme.css">
+      <link rel="stylesheet" href="../../stylesheets/dracula-code-theme.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -69,11 +69,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="XOR Encryption - Black-Hat-Zig" >
+        <meta  property="og:title"  content="Intro - Black-Hat-Zig" >
       
         <meta  property="og:description"  content="None" >
       
-        <meta  property="og:image"  content="https://black-hat-zig.cx330.tw/assets/images/social/Basic-Payload-Management/Payload-Encryption/XOR.png" >
+        <meta  property="og:image"  content="https://black-hat-zig.cx330.tw/assets/images/social/Basic-Payload-Management/intro.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -81,15 +81,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Encryption/XOR/" >
+        <meta  property="og:url"  content="https://black-hat-zig.cx330.tw/Basic-Payload-Management/intro/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="XOR Encryption - Black-Hat-Zig" >
+        <meta  name="twitter:title"  content="Intro - Black-Hat-Zig" >
       
         <meta  name="twitter:description"  content="None" >
       
-        <meta  name="twitter:image"  content="https://black-hat-zig.cx330.tw/assets/images/social/Basic-Payload-Management/Payload-Encryption/XOR.png" >
+        <meta  name="twitter:image"  content="https://black-hat-zig.cx330.tw/assets/images/social/Basic-Payload-Management/intro.png" >
       
     
     
@@ -112,7 +112,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#xor-encryption" class="md-skip">
+        <a href="#basic-payload-management" class="md-skip">
           Skip to content
         </a>
       
@@ -126,9 +126,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Black-Hat-Zig" class="md-header__button md-logo" aria-label="Black-Hat-Zig" data-md-component="logo">
+    <a href="../.." title="Black-Hat-Zig" class="md-header__button md-logo" aria-label="Black-Hat-Zig" data-md-component="logo">
       
-  <img src="../../../assets/zig.svg" alt="logo">
+  <img src="../../assets/zig.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              XOR Encryption
+              Intro
             
           </span>
         </div>
@@ -265,7 +265,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   
@@ -287,7 +287,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../intro/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -307,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Advanced-Malware-Techniques/intro/" class="md-tabs__link">
+        <a href="../../Advanced-Malware-Techniques/intro/" class="md-tabs__link">
           
   
   
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Malware-Examples/intro/" class="md-tabs__link">
+        <a href="../../Malware-Examples/intro/" class="md-tabs__link">
           
   
   
@@ -345,7 +345,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../epilogue/" class="md-tabs__link">
+      <a href="../../epilogue/" class="md-tabs__link">
         
   
   
@@ -380,9 +380,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Black-Hat-Zig" class="md-nav__button md-logo" aria-label="Black-Hat-Zig" data-md-component="logo">
+    <a href="../.." title="Black-Hat-Zig" class="md-nav__button md-logo" aria-label="Black-Hat-Zig" data-md-component="logo">
       
-  <img src="../../../assets/zig.svg" alt="logo">
+  <img src="../../assets/zig.svg" alt="logo">
 
     </a>
     Black-Hat-Zig
@@ -450,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -473,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../prologue/" class="md-nav__link">
+      <a href="../../prologue/" class="md-nav__link">
         
   
   
@@ -546,10 +546,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../intro/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -560,6 +569,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -613,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Payload-Placement/dot_data/" class="md-nav__link">
+      <a href="../Payload-Placement/dot_data/" class="md-nav__link">
         
   
   
@@ -636,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Payload-Placement/dot_rdata/" class="md-nav__link">
+      <a href="../Payload-Placement/dot_rdata/" class="md-nav__link">
         
   
   
@@ -659,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Payload-Placement/dot_text/" class="md-nav__link">
+      <a href="../Payload-Placement/dot_text/" class="md-nav__link">
         
   
   
@@ -682,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Payload-Placement/dot_rsrc/" class="md-nav__link">
+      <a href="../Payload-Placement/dot_rsrc/" class="md-nav__link">
         
   
   
@@ -754,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Payload-Obfuscation/IP-Address-Obfuscation/" class="md-nav__link">
+      <a href="../Payload-Obfuscation/IP-Address-Obfuscation/" class="md-nav__link">
         
   
   
@@ -777,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Payload-Obfuscation/MAC-Address-Obfuscation/" class="md-nav__link">
+      <a href="../Payload-Obfuscation/MAC-Address-Obfuscation/" class="md-nav__link">
         
   
   
@@ -800,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Payload-Obfuscation/UUID-Obfuscation/" class="md-nav__link">
+      <a href="../Payload-Obfuscation/UUID-Obfuscation/" class="md-nav__link">
         
   
   
@@ -828,8 +838,6 @@
                 
   
   
-    
-  
   
   
     
@@ -840,11 +848,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
@@ -860,7 +868,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Payload Encryption
@@ -871,32 +879,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    XOR Encryption
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Payload-Encryption/XOR/" class="md-nav__link">
         
   
   
@@ -907,44 +893,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tldr" class="md-nav__link">
-    <span class="md-ellipsis">
-      TL;DR
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-standard-library" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Standard Library
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -957,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RC4/" class="md-nav__link">
+      <a href="../Payload-Encryption/RC4/" class="md-nav__link">
         
   
   
@@ -980,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AES/" class="md-nav__link">
+      <a href="../Payload-Encryption/AES/" class="md-nav__link">
         
   
   
@@ -1052,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Payload-Execution/dll/" class="md-nav__link">
+      <a href="../Payload-Execution/dll/" class="md-nav__link">
         
   
   
@@ -1075,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Payload-Execution/shellcode/" class="md-nav__link">
+      <a href="../Payload-Execution/shellcode/" class="md-nav__link">
         
   
   
@@ -1154,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/intro/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/intro/" class="md-nav__link">
         
   
   
@@ -1218,7 +1166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Process-Injection/dll_injection/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Process-Injection/dll_injection/" class="md-nav__link">
         
   
   
@@ -1241,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Process-Injection/shellcode_injection/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Process-Injection/shellcode_injection/" class="md-nav__link">
         
   
   
@@ -1305,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Process-Injection/APC-Injection/classic_apc_injection/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Process-Injection/APC-Injection/classic_apc_injection/" class="md-nav__link">
         
   
   
@@ -1328,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Process-Injection/APC-Injection/early_bird_apc_injection/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Process-Injection/APC-Injection/early_bird_apc_injection/" class="md-nav__link">
         
   
   
@@ -1400,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Process-Injection/Thread-Hijacking/local_thread_creation/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Process-Injection/Thread-Hijacking/local_thread_creation/" class="md-nav__link">
         
   
   
@@ -1423,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Process-Injection/Thread-Hijacking/local_thread_enumeration/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Process-Injection/Thread-Hijacking/local_thread_enumeration/" class="md-nav__link">
         
   
   
@@ -1446,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Process-Injection/Thread-Hijacking/remote_thread_creation/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Process-Injection/Thread-Hijacking/remote_thread_creation/" class="md-nav__link">
         
   
   
@@ -1469,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Process-Injection/Thread-Hijacking/remote_thread_enumeration/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Process-Injection/Thread-Hijacking/remote_thread_enumeration/" class="md-nav__link">
         
   
   
@@ -1549,7 +1497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Payload-Staging/web_server/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Payload-Staging/web_server/" class="md-nav__link">
         
   
   
@@ -1572,7 +1520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Payload-Staging/windows_registry/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Payload-Staging/windows_registry/" class="md-nav__link">
         
   
   
@@ -1644,7 +1592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Process-Enumeration/create_tool_help_32_snapshot/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Process-Enumeration/create_tool_help_32_snapshot/" class="md-nav__link">
         
   
   
@@ -1667,7 +1615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Process-Enumeration/enum_processes/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Process-Enumeration/enum_processes/" class="md-nav__link">
         
   
   
@@ -1690,7 +1638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Process-Enumeration/nt_query_system_information/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Process-Enumeration/nt_query_system_information/" class="md-nav__link">
         
   
   
@@ -1721,7 +1669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Advanced-Malware-Techniques/Callback-Code-Execution/callback_code_execution/" class="md-nav__link">
+      <a href="../../Advanced-Malware-Techniques/Callback-Code-Execution/callback_code_execution/" class="md-nav__link">
         
   
   
@@ -1792,7 +1740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Malware-Examples/intro/" class="md-nav__link">
+      <a href="../../Malware-Examples/intro/" class="md-nav__link">
         
   
   
@@ -1856,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Malware-Examples/Reverse-Shell/std_reverse_shell/" class="md-nav__link">
+      <a href="../../Malware-Examples/Reverse-Shell/std_reverse_shell/" class="md-nav__link">
         
   
   
@@ -1879,7 +1827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Malware-Examples/Reverse-Shell/std_reverse_shell_with_tls/" class="md-nav__link">
+      <a href="../../Malware-Examples/Reverse-Shell/std_reverse_shell_with_tls/" class="md-nav__link">
         
   
   
@@ -1917,7 +1865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../epilogue/" class="md-nav__link">
+      <a href="../../epilogue/" class="md-nav__link">
         
   
   
@@ -1952,32 +1900,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tldr" class="md-nav__link">
-    <span class="md-ellipsis">
-      TL;DR
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-standard-library" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Standard Library
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1995,71 +1917,17 @@
   
 
 
-<h1 id="xor-encryption">XOR Encryption</h1>
-<h2 id="tldr">TL;DR</h2>
-<p><a href="https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Encryption/XOR">See the code example</a></p>
-<p>Exclusive OR (XOR) encryption is one of the simplest ways to obfuscate data.
-Each byte of the payload is XORed with a key value. Applying the same operation
-again restores the original bytes. While trivial to reverse if the key is known,
-XOR still hides clear text strings and shellcode from basic scans. The chapter
-shows two XOR routines—one that incorporates the byte index and another that
-uses a multi-byte key—to demonstrate how attackers might protect their payloads
-without resorting to heavy cryptography.</p>
-<h2 id="using-standard-library">Using Standard Library</h2>
-<div class="language-zig highlight"><span class="filename">main.zig</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">const</span><span class="w"> </span><span class="n">std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">@import</span><span class="p">(</span><span class="s">&quot;std&quot;</span><span class="p">);</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">/// This is the first approach to encrypt the payload.</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">/// We add the index &quot;i&quot; to each iteration to make the encryption</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">/// more complicated.</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">fn</span><span class="w"> </span><span class="n">xorWithKeyAndIndex</span><span class="p">(</span><span class="n">payload</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="o">:</span><span class="w"> </span><span class="kt">u8</span><span class="p">)</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">payload</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">..)</span><span class="w"> </span><span class="o">|*</span><span class="n">byte</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="c1">// Truncate i to u8 (i mod 256), then do wrapping add with key (overflow in the sum),</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="c1">// finally XOR the result with the payload byte.</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="n">byte</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">byte</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">+%</span><span class="w"> </span><span class="nb">@as</span><span class="p">(</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="nb">@truncate</span><span class="p">(</span><span class="n">i</span><span class="p">)));</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">/// This is the second approach to encrypt the payload.</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1">/// We use a multi-bytes key and iterate each byte as different</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1">/// key in each iteration.</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="k">fn</span><span class="w"> </span><span class="n">xorWithMultiBytesKey</span><span class="p">(</span><span class="n">payload</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="kr">const</span><span class="w"> </span><span class="kt">u8</span><span class="p">)</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">key_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="n">len</span><span class="p">;</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">key_len</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="nb">@panic</span><span class="p">(</span><span class="s">&quot;Key length must be greater than 0&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Division by zero</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">j</span><span class="o">:</span><span class="w"> </span><span class="kt">usize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="o">|*</span><span class="n">byte</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">        </span><span class="n">byte</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">byte</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="n">j</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">key_len</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">            </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="p">}</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="kr">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="o">!</span><span class="kt">void</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">stdout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">getStdOut</span><span class="p">().</span><span class="n">writer</span><span class="p">();</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">payload1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">_</span><span class="p">]</span><span class="kt">u8</span><span class="p">{</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0x20</span><span class="p">,</span><span class="w"> </span><span class="mh">0x30</span><span class="p">,</span><span class="w"> </span><span class="mh">0x40</span><span class="p">,</span><span class="w"> </span><span class="mh">0x50</span><span class="w"> </span><span class="p">};</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">key1</span><span class="o">:</span><span class="w"> </span><span class="kt">u8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xAA</span><span class="p">;</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[+] Original payload1: {any}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">payload1</span><span class="p">});</span>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="c1">// Encrypt</span>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="n">xorWithKeyAndIndex</span><span class="p">(</span><span class="n">payload1</span><span class="p">[</span><span class="mi">0</span><span class="p">..],</span><span class="w"> </span><span class="n">key1</span><span class="p">);</span>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[+] After xorByIKeys with key {X}: {any}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="w"> </span><span class="n">key1</span><span class="p">,</span><span class="w"> </span><span class="n">payload1</span><span class="w"> </span><span class="p">});</span>
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="c1">// Decrypt</span>
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">    </span><span class="n">xorWithKeyAndIndex</span><span class="p">(</span><span class="n">payload1</span><span class="p">[</span><span class="mi">0</span><span class="p">..],</span><span class="w"> </span><span class="n">key1</span><span class="p">);</span>
-</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[+] Restored payload1: {any}</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">payload1</span><span class="p">});</span>
-</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">payload2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">_</span><span class="p">]</span><span class="kt">u8</span><span class="p">{</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="mh">0x03</span><span class="p">,</span><span class="w"> </span><span class="mh">0x04</span><span class="p">,</span><span class="w"> </span><span class="mh">0x05</span><span class="p">,</span><span class="w"> </span><span class="mh">0x06</span><span class="w"> </span><span class="p">};</span>
-</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">key2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">_</span><span class="p">]</span><span class="kt">u8</span><span class="p">{</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0x20</span><span class="p">,</span><span class="w"> </span><span class="mh">0x30</span><span class="w"> </span><span class="p">};</span>
-</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[+] Original payload2: {any}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">payload2</span><span class="p">});</span>
-</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">    </span><span class="c1">// Encrypt</span>
-</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">    </span><span class="n">xorWithMultiBytesKey</span><span class="p">(</span><span class="n">payload2</span><span class="p">[</span><span class="mi">0</span><span class="p">..],</span><span class="w"> </span><span class="n">key2</span><span class="p">[</span><span class="mi">0</span><span class="p">..]);</span>
-</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[+] After xorByInputKey with key {any}: {any}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="w"> </span><span class="n">key2</span><span class="p">,</span><span class="w"> </span><span class="n">payload2</span><span class="w"> </span><span class="p">});</span>
-</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">    </span><span class="c1">// Decrypt</span>
-</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">    </span><span class="n">xorWithMultiBytesKey</span><span class="p">(</span><span class="n">payload2</span><span class="p">[</span><span class="mi">0</span><span class="p">..],</span><span class="w"> </span><span class="n">key2</span><span class="p">[</span><span class="mi">0</span><span class="p">..]);</span>
-</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[+] Restored payload2: {any}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">payload2</span><span class="p">});</span>
-</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="p">}</span>
-</span></code></pre></div>
+<h1 id="basic-payload-management">Basic Payload Management</h1>
+<p>This section introduces fundamental techniques for storing, encrypting,
+obfuscating, and executing payloads. Topics include:</p>
+<ul>
+<li>Payload placement in different sections of an executable</li>
+<li>Encryption routines (XOR, RC4, AES)</li>
+<li>Simple obfuscation methods</li>
+<li>Loading payloads via shellcode or DLLs</li>
+</ul>
+<p>Use these chapters to learn how to prepare payloads for later delivery
+and execution while evading simple detection.</p>
 
 
 
@@ -2100,7 +1968,7 @@ without resorting to heavy cryptography.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../Payload-Obfuscation/UUID-Obfuscation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UUID Obfuscation">
+          <a href="../../prologue/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Before We Start">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2110,20 +1978,20 @@ without resorting to heavy cryptography.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                UUID Obfuscation
+                Before We Start
               </div>
             </div>
           </a>
         
         
           
-          <a href="../RC4/" class="md-footer__link md-footer__link--next" aria-label="Next: RC4 Encryption">
+          <a href="../Payload-Placement/dot_data/" class="md-footer__link md-footer__link--next" aria-label="Next: .data Section">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                RC4 Encryption
+                .data Section
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2236,10 +2104,10 @@ without resorting to heavy cryptography.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotation", "search.share", "search.highlight", "search.suggest", "content.code.select", "navigation.path", "navigation.footer", "navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tracking", "navigation.instant", "navigation.instant.prefetch"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotation", "search.share", "search.highlight", "search.suggest", "content.code.select", "navigation.path", "navigation.footer", "navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tracking", "navigation.instant", "navigation.instant.prefetch"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>
