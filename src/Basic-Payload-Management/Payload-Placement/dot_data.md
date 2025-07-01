@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Placement/dot_data_section)
+[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Basic-Payload-Management/Payload-Placement/dot_data_section)
 
 The `.data` section contains global variables that are readable and writable.
 Placing shellcode here is the simplest approach—declare a mutable array with the

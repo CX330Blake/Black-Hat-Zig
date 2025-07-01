@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Execution/dll)
+[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Basic-Payload-Management/Payload-Execution/dll)
 
 Instead of embedding shellcode directly, malware can bundle its functionality in
 a DLL and rely on a small loader to execute it. The loader locates the DLL at

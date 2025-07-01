@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Execution/shellcode)
+[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Basic-Payload-Management/Payload-Execution/shellcode)
 
 Executing payloads as shellcode involves storing the machine code directly in a
 buffer, allocating executable memory, and then jumping to that buffer. The code
