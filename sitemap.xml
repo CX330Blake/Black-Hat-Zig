@@ -13,14 +13,6 @@
          <lastmod>2025-07-01</lastmod>
     </url>
     <url>
-         <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/APC-Injection/apc_injection/</loc>
-         <lastmod>2025-07-01</lastmod>
-    </url>
-    <url>
-         <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/APC-Injection/early_bird_apc_injection/</loc>
-         <lastmod>2025-07-01</lastmod>
-    </url>
-    <url>
          <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/Callback-Code-Execution/callback_code_execution/</loc>
          <lastmod>2025-07-01</lastmod>
     </url>
@@ -53,19 +45,27 @@
          <lastmod>2025-07-01</lastmod>
     </url>
     <url>
-         <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/Thread-Hijacking/local_thread_creation/</loc>
+         <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/Process-Injection/APC-Injection/apc_injection/</loc>
          <lastmod>2025-07-01</lastmod>
     </url>
     <url>
-         <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/Thread-Hijacking/local_thread_enumeration/</loc>
+         <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/Process-Injection/APC-Injection/early_bird_apc_injection/</loc>
          <lastmod>2025-07-01</lastmod>
     </url>
     <url>
-         <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/Thread-Hijacking/remote_thread_creation/</loc>
+         <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/Process-Injection/Thread-Hijacking/local_thread_creation/</loc>
          <lastmod>2025-07-01</lastmod>
     </url>
     <url>
-         <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/Thread-Hijacking/remote_thread_enumeration/</loc>
+         <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/Process-Injection/Thread-Hijacking/local_thread_enumeration/</loc>
+         <lastmod>2025-07-01</lastmod>
+    </url>
+    <url>
+         <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/Process-Injection/Thread-Hijacking/remote_thread_creation/</loc>
+         <lastmod>2025-07-01</lastmod>
+    </url>
+    <url>
+         <loc>https://black-hat-zig.cx330.tw/Malware-Techniques/Process-Injection/Thread-Hijacking/remote_thread_enumeration/</loc>
          <lastmod>2025-07-01</lastmod>
     </url>
     <url>
