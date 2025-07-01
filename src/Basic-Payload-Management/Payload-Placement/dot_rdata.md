@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Placement/dot_rdata_section)
+[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Basic-Payload-Management/Payload-Placement/dot_rdata_section)
 
 The `.rdata` section holds read‑only data such as constants and string literals.
 By marking the payload as `const`, which will make it read-only, we can store shellcode

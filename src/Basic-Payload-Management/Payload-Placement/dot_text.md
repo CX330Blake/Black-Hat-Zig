@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Placement/dot_text_section)
+[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Basic-Payload-Management/Payload-Placement/dot_text_section)
 
 Placing a payload in the `.text` section hides it among the program's executable
 instructions. Because this section is typically marked read-only and executable,

@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Obfuscation/UUID-Obfuscation)
+[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Basic-Payload-Management/Payload-Obfuscation/UUID-Obfuscation)
 
 UUID obfuscation stores shellcode chunks as Universally Unique Identifier
 strings. Since UUIDs are routinely seen in configuration files and logs, a list

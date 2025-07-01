@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Obfuscation/IP-Address-Obfuscation)
+[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Basic-Payload-Management/Payload-Obfuscation/IP-Address-Obfuscation)
 
 IP address obfuscation disguises shellcode bytes as seemingly harmless IP
 strings. Each byte is translated into a portion of an IPv4 or IPv6 address,

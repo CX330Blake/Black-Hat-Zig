@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Payload-Encryption/XOR)
+[See the code example](https://github.com/CX330Blake/Black-Hat-Zig/tree/main/src/Basic-Payload-Management/Payload-Encryption/XOR)
 
 Exclusive OR (XOR) encryption is one of the simplest ways to obfuscate data.
 Each byte of the payload is XORed with a key value. Applying the same operation
