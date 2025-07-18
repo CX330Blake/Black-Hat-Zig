@@ -14,27 +14,24 @@ byte patterns.
 
 ## Using SystemFunction032
 
+Preparing `USTRING` struct to represent the key and data buffers. `extern` is used so that its memory layout matches that of a corresponding C strcuct.
 ```zig title="main.zig"
-const std = @import("std");
-const win = std.os.windows;
-const kernel32 = win.kernel32;
-
-const DWORD = u32;
-const NTSTATUS = i32;
-const PVOID = ?*anyopaque; // equivalent to C's void*
-const BOOL = i32;
-
 const USTRING = extern struct {
     Length: DWORD,
     MaximumLength: DWORD,
     Buffer: PVOID,
 };
-
+```
+`fnSystemFunction032` is a fucntion pointer to `SystemFunction032`
+```zig title="main.zig"
 const fnSystemFunction032 = fn (
     Data: *USTRING,
     Key: *USTRING,
 ) callconv(.C) NTSTATUS;
+```
 
+Helper function to call `SystemFunction032`
+```zig title="main.zig"
 /// Helper function that calls SystemFunction032 (RC4)
 /// Reference: https://osandamalith.com/2022/11/10/encrypting-shellcode-using-systemfunction032-033/
 pub fn rc4EncryptionViaSystemFunc032(
@@ -78,7 +75,9 @@ pub fn rc4EncryptionViaSystemFunc032(
     }
     return true;
 }
-
+```
+Example usage:
+```zig title="main.zig"
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
 
@@ -107,27 +106,25 @@ pub fn main() !void {
 
 ## Using SystemFunction033
 
+Preparing the `USTRING`
 ```zig title="main.zig"
-const std = @import("std");
-const win = std.os.windows;
-const kernel32 = win.kernel32;
-
-const DWORD = u32;
-const NTSTATUS = i32;
-const PVOID = ?*anyopaque; // equivalent to C's void*
-const BOOL = i32;
-
 const USTRING = extern struct {
     Length: DWORD,
     MaximumLength: DWORD,
     Buffer: PVOID,
 };
+```
 
+`fnSystemFunction033` is the function pointer to `SystemFunction032`:
+```zig title="main.zig"
 const fnSystemFunction033 = fn (
     Data: *USTRING,
     Key: *USTRING,
 ) callconv(.C) NTSTATUS;
+```
 
+Helper function to call `SystemFunction033`:
+```zig title="main.zig"
 /// Helper function that calls SystemFunction033 (RC4)
 /// Reference: https://osandamalith.com/2022/11/10/encrypting-shellcode-using-systemfunction032-033/
 pub fn rc4EncryptionViaSystemFunc033(
@@ -171,7 +168,10 @@ pub fn rc4EncryptionViaSystemFunc033(
     }
     return true;
 }
+```
 
+Example usage:
+```zig title="main.zig"
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
 
