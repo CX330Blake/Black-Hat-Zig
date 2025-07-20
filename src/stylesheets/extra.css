@@ -63,9 +63,9 @@
 
 /* 色彩定義：亮色與暗色主題 */
 [data-md-color-scheme="slate"] {
-    --md-default-fg-color: #f3f1f1;
+    --md-default-fg-color: #f8f8f2;
     /* --md-default-fg-color--light: #f3f1f1c0; */
-    --md-typeset-color: #f3f1f1;
+    --md-typeset-color: #f8f8f2;
     /* --md-typeset-a-color: #d63826; */
     /* --md-search-highlight-color: #57160f; */
 }
