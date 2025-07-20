@@ -1,3 +1,47 @@
+/* Set the website width to be wider */
 .md-grid {
     max-width: 1440px;
+}
+
+/* Add the matching padding they forgot at the bottom of the page */
+.md-main__inner {
+    margin-bottom: 1.5rem;
+}
+
+/* Workaround for them using :first-child in the header topic for no good reason */
+.md-header__topic {
+    font-weight: 700;
+}
+
+/* Make headings stand out more */
+.md-typeset h1 {
+    font-weight: 700;
+    color: var(--md-typeset-color);
+}
+.md-typeset h2 {
+    font-weight: 700;
+    border-bottom: 2px solid var(--md-typeset-color);
+    padding-bottom: 4px;
+}
+.md-typeset h3 {
+    font-weight: 700;
+}
+.md-typeset h4 {
+    font-weight: 700;
+}
+.md-typeset h5 {
+    font-weight: 700;
+}
+
+/* Make links in main text underlined so you actually know they're clickable */
+.md-typeset a {
+    text-decoration: underline;
+}
+.md-typeset a:hover {
+    text-decoration: none;
+}
+
+/* Also make the "more on this page" text underlined so you know it's clickable */
+.md-search-result__more summary div {
+    text-decoration: underline;
 }
