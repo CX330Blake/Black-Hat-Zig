@@ -1,6 +1,9 @@
 /* Set the website width to be wider */
+/* .md-grid { */
+/*     max-width: 1440px; */
+/* } */
 .md-grid {
-    max-width: 1440px;
+    max-width: 95%;
 }
 
 /* Add the matching padding they forgot at the bottom of the page */
