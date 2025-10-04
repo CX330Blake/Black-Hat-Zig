@@ -2,150 +2,150 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://black-hat-zig.cx330.tw/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/epilogue/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/prologue/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/intro/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
+    </url>
+    <url>
+         <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Others/Callback-Code-Execution/callback_code_execution/</loc>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Payload-Staging/web_server/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Payload-Staging/windows_registry/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Enumeration/create_tool_help_32_snapshot/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Enumeration/enum_processes/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Enumeration/nt_query_system_information/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Injection/APC-Injection/classic_apc_injection/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Injection/APC-Injection/early_bird_apc_injection/</loc>
-         <lastmod>2025-10-03</lastmod>
-    </url>
-    <url>
-         <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Injection/Callback-Code-Execution/callback_code_execution/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Injection/DLL-Injection/dll_injection/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Injection/Heavens-Gate/heavens_gate/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Injection/Mapping-Injection/local_mapping_injection/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Injection/Mapping-Injection/remote_mapping_injection/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Injection/Shellcode-Injection/shellcode_injection/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Injection/Thread-Hijacking/local_thread_creation/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Injection/Thread-Hijacking/local_thread_enumeration/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Injection/Thread-Hijacking/remote_thread_creation/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Advanced-Malware-Techniques/Process-Injection/Thread-Hijacking/remote_thread_enumeration/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/intro/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Encryption/AES/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Encryption/RC4/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Encryption/XOR/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Execution/dll/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Execution/shellcode/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Obfuscation/IP-Address-Obfuscation/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Obfuscation/MAC-Address-Obfuscation/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Obfuscation/UUID-Obfuscation/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Placement/dot_data/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Placement/dot_rdata/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Placement/dot_rsrc/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Basic-Payload-Management/Payload-Placement/dot_text/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Malware-Examples/intro/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Malware-Examples/Reverse-Shell/std_reverse_shell/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
     <url>
          <loc>https://black-hat-zig.cx330.tw/Malware-Examples/Reverse-Shell/std_reverse_shell_with_tls/</loc>
-         <lastmod>2025-10-03</lastmod>
+         <lastmod>2025-10-04</lastmod>
     </url>
 </urlset>
