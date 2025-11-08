@@ -96,6 +96,7 @@ Huge thanks for these contributors!
 
 ## Star History
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d4c0c33e3e574e4893598791d3e9d178)](https://app.codacy.com/gh/CX330Blake/Black-Hat-Zig?utm_source=github.com&utm_medium=referral&utm_content=CX330Blake/Black-Hat-Zig&utm_campaign=Badge_Grade)
 [![Star History Chart](https://api.star-history.com/svg?repos=CX330blake/black-hat-zig&type=Date)](https://www.star-history.com/#CX330blake/black-hat-zig&Date)
 
 ## Disclaimer
